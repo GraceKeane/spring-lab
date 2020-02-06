@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="personBean" class="com.lab3.Person">
+		<constructor-arg name="firstName" value="John"></constructor-arg>
+		<constructor-arg name="surname" value="Smith"></constructor-arg>
+		<constructor-arg name="address" ref="addressBean"></constructor-arg>
+	</bean>
+
+	<bean id="addressBean" class="com.lab3.Address">
+		<constructor-arg value="Main.st"></constructor-arg>
+		<constructor-arg value="Tuam"></constructor-arg>
+		<constructor-arg value="Galway"></constructor-arg>
+		
+	</bean>
+
+</beans>
